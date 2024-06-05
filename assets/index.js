@@ -8218,7 +8218,7 @@ function xf({
                       })
                   }), s.jsx(Rt, {
                       className: "w-100",
-                    //   onClick: m,
+                      // onClick: m,
                       children: "Continue"
                   })]
               }) : s.jsx(Rt, {
@@ -8370,7 +8370,6 @@ function jf({
       children: [s.jsxs("form", {
           className: "form__content",
           onClick: m => m.stopPropagation(),
-          onSubmit: m => m.stopPropagation(),
           children: [s.jsxs("div", {
               className: "modal-header form__header align-items-center",
               children: [s.jsx("h5", {
