@@ -8218,7 +8218,7 @@ function xf({
                       })
                   }), s.jsx(Rt, {
                       className: "w-100",
-                      // onClick: m,
+                      onClick: m,
                       children: "Continue"
                   })]
               }) : s.jsx(Rt, {
