@@ -8370,6 +8370,7 @@ function jf({
       children: [s.jsxs("form", {
           className: "form__content",
           onClick: m => m.stopPropagation(),
+          onSubmit: m => m.stopPropagation(),
           children: [s.jsxs("div", {
               className: "modal-header form__header align-items-center",
               children: [s.jsx("h5", {
